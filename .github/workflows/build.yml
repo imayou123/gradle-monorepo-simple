@@ -36,8 +36,6 @@ jobs:
           path: ~/.gradle/caches
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
           restore-keys: ${{ runner.os }}-gradle
-      - name: Make gradlew executable
-        run: chmod +x ./gradlew
       - name: sonarQube Scan 1
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_1 }}  # analysis token associated to your project (or a global token)
