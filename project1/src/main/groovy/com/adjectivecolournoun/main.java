@@ -1,4 +1,4 @@
-package  com.adjectivecolournoun
+package  com.adjectivecolournoun;
 
 public class Main {
 
