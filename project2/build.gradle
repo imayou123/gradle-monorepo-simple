@@ -2,6 +2,7 @@ plugins {
     id 'groovy'
     id 'application'
     id 'com.github.johnrengelman.shadow' version '5.2.0'
+    id "org.sonarqube" version "5.0.0.4638"
 }
 
 repositories {
@@ -28,4 +29,11 @@ dependencies {
 
 application {
     mainClassName = 'com.adjectivecolournoun.gradle.Greetz'
+}
+
+sonar {
+  properties {
+    property "sonar.projectKey", "imayou123_gradle-monorepo-simple_project2"
+    property "sonar.projectName", "imayou123_gradle-monorepo-simple_project2"
+  }
 }
